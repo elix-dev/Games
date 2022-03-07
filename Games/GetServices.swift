@@ -25,7 +25,7 @@ func validation(value: Bool) {
         endpoint = endpointCategory
     }
 }
-
+//Hello
 class Observer: ObservableObject {
     
     @Published var games = [GameData]()
