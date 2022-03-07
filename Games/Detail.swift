@@ -28,13 +28,13 @@ struct Detail: View {
                     AsyncImage( url: URL(string: thumbnail ))
                         .scaledToFill()
                         .clipShape(RoundedRectangle(cornerRadius:5))
-                      //  .shadow(radius: 30)
+                        .shadow(radius: 30)
                     
                 }.navigationTitle("Details Game")
                 List{
-                    //Text("\(thumbnail)")
+                    Text("\(thumbnail)")
                     Text("\(title)")
-                        //.font(.title)
+                        .font(.title)
                     Text("\(short_description)")
                     Text("\(developer)")
                     Text("\(release_date)")
