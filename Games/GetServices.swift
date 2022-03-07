@@ -51,7 +51,9 @@ class Observer: ObservableObject {
                 
             }
             print(self.games.count)
+            print("hola")
         }
     }
 }
 
+      

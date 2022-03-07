@@ -34,14 +34,15 @@ struct Detail: View {
                 List{
                     //Text("\(thumbnail)")
                     Text("\(title)")
-                        .font(.title)
+                        //.font(.title)
                     Text("\(short_description)")
                     Text("\(developer)")
                     Text("\(release_date)")
                     Text("\(publisher)")
                     Text("\(game_url)")
                     Text("\( genre)")
-                    Text("\(freetogame_profile_url)")
+                    Text("\(freetogame_profile_url)"
+                    )
                 }
             }
         }
