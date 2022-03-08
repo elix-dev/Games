@@ -25,7 +25,9 @@ struct ContentView : View {
      }*/
     
     var body: some View {
+        
         VStack {
+           
             HStack{
                 Text("Platform")
                 Toggle("", isOn: $filterGamesType).padding(20)
@@ -36,50 +38,69 @@ struct ContentView : View {
                             alignment: .center
                     )
                 Text("Category")
+                
             }
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle())
+                .scaleEffect(2)
+                .tint(.blue)
         }
-        NavigationView{
-            List(obs.games) { game in
-                NavigationLink(
-                    destination: Detail(
-                        id: game.thumbnail,
-                        developer: game.developer,
-                        short_description: game.short_description,
-                        release_date: game.release_date,
-                        publisher: game.publisher,
-                        game_url: game.game_url,
-                        genre: game.genre,
-                        freetogame_profile_url: game.freetogame_profile_url,
-                        title: game.title,
-                        thumbnail: game.thumbnail)) {
-                            
-                            VStack {
-                                VStack(alignment: .leading){
-                                    AsyncImage(url: URL(string: game.thumbnail))
-                                        .scaledToFill()
-                                        .clipShape(RoundedRectangle(cornerRadius: 5))
-                                        .shadow(radius:30)
-                                    Text(game.title)
-                                        .font(.title2)
-                                        .multilineTextAlignment(.leading)
-                                    Text(game.short_description)
-                                        .font(.footnote)
+ 
+            NavigationView{
+  
+                    List(obs.games) { game in
+                        NavigationLink(
+                            destination: Detail(
+                                id: game.thumbnail,
+                                developer: game.developer,
+                                short_description: game.short_description,
+                                release_date: game.release_date,
+                                publisher: game.publisher,
+                                game_url: game.game_url,
+                                genre: game.genre,
+                                freetogame_profile_url: game.freetogame_profile_url,
+                                title: game.title,
+                                thumbnail: game.thumbnail)) {
+                                    
+                                    
+                                    VStack {
+                                        VStack(alignment: .leading){
+                                            AsyncImage(url: URL(string: game.thumbnail))
+                                                .scaledToFill()
+                                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                                                .shadow(radius:30)
+                                            
+                                            Text(game.title)
+                                                .font(.title2)
+                                                .multilineTextAlignment(.leading)
+                                            Text(game.short_description)
+                                                .font(.footnote)
+
+                                        }
+                                        
+                                        }
+                                    }
                                 }
-                            }
-                        }
-            }.navigationTitle("Games" )
+                    }.navigationTitle("Games" )
+                    
+                    //Barra de busqueda
+                        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search for games")
+                }
+            }
+
+        
+
             
-            //Barra de busqueda
-                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search for games")
+        
+       
+
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
         }
     }
 
-}
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
+                
+            
+            
+           

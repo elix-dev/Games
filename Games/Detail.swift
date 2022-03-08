@@ -19,7 +19,7 @@ struct Detail: View {
     let freetogame_profile_url: String
     let title: String
     let thumbnail: String
-    //gjghghghjhcgvjhdfgfhdsgh
+ 
     
     var body: some View {
         NavigationView {
