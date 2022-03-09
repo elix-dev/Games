@@ -11,9 +11,9 @@ import SwiftUI
 import Alamofire
 import SwiftyJSON
 //import Kingfisher
-    
-let endpointPlatform = "/games?platform=browser"
-let endpointCategory = "/games?category=shooter"
+
+let endpointPlatform = "/games?platform="
+let endpointCategory = "/games?category="
 let urlBase = "https://www.freetogame.com/api"
 let urlEveryone = "https://www.freetogame.com/api/games"
 var endpoint = endpointPlatform
@@ -26,13 +26,14 @@ func validation(value: Bool) {
     }
 }
 //Hello
+
 class Observer: ObservableObject {
     
     @Published var games = [GameData]()
     @State private var endpointChange = endpoint
     init() {
                 //\(urlEveryone)\(endpointChange)
-        AF.request("\(urlEveryone)").responseData { (dataGames) in
+            AF.request("\(urlEveryone)").responseData { (dataGames) in
             let json = try! JSON(data: dataGames.data!)
             for game in json {
                 print(game.1)
@@ -48,10 +49,9 @@ class Observer: ObservableObject {
                         freetogame_profile_url: game.1["freetogame_profile_url"].stringValue,
                         title: game.1["title"].stringValue,
                         thumbnail: game.1["thumbnail"].stringValue))
-                
             }
             print(self.games.count)
-            print("hola")
+         
         }
     }
 }
