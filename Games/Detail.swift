@@ -20,7 +20,7 @@ struct Detail: View {
     let title: String
     let thumbnail: String
  
-    @State private var valorStepper = 1
+    
     var body: some View {
      //   NavigationView {
             
@@ -33,20 +33,9 @@ struct Detail: View {
                     
                // }.navigationTitle("Details Game")
                 List{
-                    HStack {
-                        Text("\(title)")
-                            .font(.title)
-                        HStack{
-                            
-                            Stepper(value: $valorStepper, in: 1...5) {
-                                
-                                
-                            }
-
-                            
-                        }
-                    }
-                    
+                  
+                    Text("\(title)")
+                    .font(.title)
                     Text("\(short_description)")
                     Text("\(developer)")
                     Text("\(release_date)")
@@ -59,7 +48,7 @@ struct Detail: View {
             }
         }
     }
-}
+
 
 struct Detail_Previews: PreviewProvider {
     static var previews: some View {
@@ -72,4 +61,5 @@ struct Detail_Previews: PreviewProvider {
         )
             .preferredColorScheme(.dark)
     }
+}
 }

@@ -13,7 +13,8 @@ struct ContentView : View {
     @State private var isLoading = false
     @ObservedObject var obs = Observer()
     @State private var searchText: String = ""//Barra de busqueda
-    @State private var filterGamesType = false
+    @State private var filterGamesTypeCategory: Bool = false
+    @State private var filterGamesTypePlatform: Bool = false
     
     /* private var searchResults: [GameData] {//Barra de busqueda
      
@@ -30,26 +31,32 @@ struct ContentView : View {
             VStack {
                 HStack(){
                     Text("Platform")
-                    Toggle("", isOn: $filterGamesType).padding(20)
-                        .onChange(of: filterGamesType) { value in
-                            validation(value: filterGamesType)
+                    Toggle("", isOn: $filterGamesTypePlatform).padding(20)
+                        .onChange(of: filterGamesTypePlatform) { value in
+                            validation(value: filterGamesTypePlatform)
+                            if filterGamesTypePlatform {
+                                filterGamesTypeCategory = false
+                                //validation(value: true)
+                            }
                         }.frame(width: 100,
                                 height: 20,
                                 alignment: .center)
-                   
-                      
-                    HStack {
-                        Text("Category")
-                        Toggle("", isOn: $filterGamesType).padding(20)
-                            .onChange(of: filterGamesType) { value in
-                                validation(value: filterGamesType)
-                            }.frame(width: 100,
-                                    height: 20,
-                                    alignment: .center)
-                    }
+
                 }.padding()
-                
-               
+
+                HStack {
+                    Text("Category")
+                    Toggle("", isOn: $filterGamesTypeCategory).padding(20)
+                        .onChange(of: filterGamesTypeCategory) { value in
+                            validation(value: filterGamesTypeCategory)
+                            if filterGamesTypeCategory {
+                                filterGamesTypePlatform = false
+                            }
+                        }.frame(width: 100,
+                                height: 20,
+                                alignment: .center)
+                }
+
                 NavigationView {
                     List( obs.games) { game in
                         NavigationLink(
@@ -100,12 +107,7 @@ struct ContentView : View {
         }
     }
 }
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .preferredColorScheme(.dark)
-    }
-}
+
 //indicator
 struct LoadingView: View {
     var body: some View {
@@ -115,5 +117,12 @@ struct LoadingView: View {
             ProgressView().progressViewStyle(CircularProgressViewStyle(tint: .blue))
                 .scaleEffect(2)
         }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }
