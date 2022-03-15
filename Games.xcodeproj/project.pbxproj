@@ -15,7 +15,6 @@
 		FD93FB1E27CD9C50008BEA53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93FB1D27CD9C50008BEA53 /* ContentView.swift */; };
 		FD93FB2027CD9C51008BEA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD93FB1F27CD9C51008BEA53 /* Assets.xcassets */; };
 		FD93FB2327CD9C51008BEA53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD93FB2227CD9C51008BEA53 /* Preview Assets.xcassets */; };
-		FD93FB2C27CD9CD0008BEA53 /* GetGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93FB2B27CD9CD0008BEA53 /* GetGames.swift */; };
 		FD93FB2F27CD9D50008BEA53 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FD93FB2E27CD9D50008BEA53 /* Alamofire */; };
 		FD93FB3227CD9DFE008BEA53 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FD93FB3127CD9DFE008BEA53 /* SDWebImageSwiftUI */; };
 		FD93FB3527CD9E8D008BEA53 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FD93FB3427CD9E8D008BEA53 /* SwiftyJSON */; };
@@ -31,7 +30,6 @@
 		FD93FB1D27CD9C50008BEA53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FD93FB1F27CD9C51008BEA53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD93FB2227CD9C51008BEA53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FD93FB2B27CD9CD0008BEA53 /* GetGames.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = GetGames.swift; sourceTree = "<group>"; };
 		FD93FB3A27CD9F96008BEA53 /* StructData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +74,6 @@
 				5B94751E27CEAB5400CC98FA /* Detail.swift */,
 				5BE2583727D27CD4001E2289 /* FavoriteGames.swift */,
 				FD93FB1F27CD9C51008BEA53 /* Assets.xcassets */,
-				FD93FB2B27CD9CD0008BEA53 /* GetGames.swift */,
 				FD93FB2127CD9C51008BEA53 /* Preview Content */,
 			);
 			path = Games;
@@ -172,7 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD93FB2C27CD9CD0008BEA53 /* GetGames.swift in Sources */,
 				5BB763DC27D003D000ED450E /* GetServices.swift in Sources */,
 				FD93FB1E27CD9C50008BEA53 /* ContentView.swift in Sources */,
 				5B94751F27CEAB5400CC98FA /* Detail.swift in Sources */,

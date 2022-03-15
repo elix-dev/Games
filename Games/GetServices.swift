@@ -53,8 +53,9 @@ class Observer: ObservableObject {
                            freetogame_profile_url: game.1["freetogame_profile_url"].stringValue,
                     title: game.1["title"].stringValue,
                     thumbnail: game.1["thumbnail"].stringValue))
+                 
                 }
-                print(self.games.count)
+                   print(self.games)
              
             }
         

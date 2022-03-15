@@ -22,18 +22,15 @@ struct Detail: View {
  
     
     var body: some View {
-     //   NavigationView {
-            
+     NavigationView {
             VStack {
-                VStack(alignment: .center){
-                    AsyncImage( url: URL(string: thumbnail ))
-                        .scaledToFill()
-                        .clipShape(RoundedRectangle(cornerRadius:5))
-                        .shadow(radius: 30)
+                AsyncImage( url: URL(string: thumbnail ))
+                    .scaledToFill()
+                    .clipShape(RoundedRectangle(cornerRadius:5))
+                    .shadow(radius: 30)
                     
                // }.navigationTitle("Details Game")
                 List{
-                  
                     Text("\(title)")
                     .font(.title)
                     Text("\(short_description)")
@@ -45,8 +42,10 @@ struct Detail: View {
                     Text("\(freetogame_profile_url)"
                     )
                 }
-            }
         }
+     }.navigationTitle("\(title)")
+     .navigationBarTitleDisplayMode(.inline)
+     .ignoresSafeArea(edges: .all)
     }
 
 
