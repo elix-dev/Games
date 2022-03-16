@@ -14,21 +14,18 @@ import SwiftyJSON
 
 let endpointPlatform = "?platform=browser"
 let endpointCategory = "?category=shooter"
-var urlBase = "https://www.freetogame.com/api/"
-var urlEveryone = "https://www.freetogame.com/api/games"
+var urlBase = "https://www.freetogame.com/api/games"
 var endpoint = ""
 
 func validation(value: Bool) {
     if value {
         endpoint = endpointPlatform
-        
+
     } else {
         endpoint = endpointCategory
-        
+        Observer()
     }
 }
-//Hello
-
 
 class Observer: ObservableObject {
     
@@ -36,8 +33,7 @@ class Observer: ObservableObject {
 
     init() {
         
-           // urlBase = "\(urlEveryone)\(endpoint)"
-               AF.request("\(urlEveryone)").responseData { (dataGames) in
+               AF.request("\(urlBase)\(endpoint)").responseData { (dataGames) in
                let json = try! JSON(data: dataGames.data!)
                for game in json {
                    print(game.1)

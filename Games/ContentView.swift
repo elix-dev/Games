@@ -17,13 +17,31 @@ struct ContentView : View {
     @State private var filterGamesTypePlatform: Bool = false
     @State private var showSheet: Bool = false
     private var searchResults: [GameData]{//Barra de busqueda
-        let resultados = obs.games;
+        let results = obs.games;
         if searchText.isEmpty {
-            return  resultados;
+            return  results;
         }
         else{
-            return resultados.filter {
-                $0.title.lowercased().contains(searchText.lowercased())
+            
+            if(filterGamesTypeCategory){
+                
+                return results.filter {
+                    $0.genre.lowercased().contains(searchText.lowercased())
+                }
+                
+            }
+            else if(filterGamesTypePlatform) {
+            
+                return results.filter {
+                    $0.publisher.lowercased().contains(searchText.lowercased()) // CREAR CAMPO PLATAFORMA
+                }
+            }
+            else {
+                
+                return results.filter {
+                    $0.title.lowercased().contains(searchText.lowercased()) // CREAR CAMPO PLATAFORMA
+                }
+                
             }
         }
     }
@@ -86,7 +104,6 @@ struct ContentView : View {
                                                     validation(value: filterGamesTypePlatform)
                                                     if filterGamesTypePlatform {
                                                         filterGamesTypeCategory = false
-                                                        //validation(value: true)
                                                     }
                                                 }.frame(width: 100,
                                                         height: 20,
@@ -110,12 +127,12 @@ struct ContentView : View {
                                 
                             }
                         }
+                }//indicator
+                if isLoading {
+                    LoadingView()
                 }
             }
-            //indicator
-            if isLoading {
-                LoadingView()
-            }
+            
             //indicator
         }.onAppear { startFakeNetworkCall() }
     }
