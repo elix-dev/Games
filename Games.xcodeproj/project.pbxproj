@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B66C10C27E363B900480CFF /* variables y constantes .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "variables y constantes .playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5B829B5C27E21A170085D1B8 /* CoreDataGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataGames.swift; sourceTree = "<group>"; };
 		5B94751E27CEAB5400CC98FA /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		5BB763DB27D003D000ED450E /* GetServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServices.swift; sourceTree = "<group>"; };
@@ -50,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B66C10D27E36A7100480CFF /* RepasoSwift */ = {
+			isa = PBXGroup;
+			children = (
+				5B66C10C27E363B900480CFF /* variables y constantes .playground */,
+			);
+			path = RepasoSwift;
+			sourceTree = "<group>";
+		};
 		FD93FB0F27CD9C50008BEA53 = {
 			isa = PBXGroup;
 			children = (
@@ -69,15 +78,16 @@
 		FD93FB1A27CD9C50008BEA53 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				5B66C10D27E36A7100480CFF /* RepasoSwift */,
 				FD93FB1B27CD9C50008BEA53 /* GamesApp.swift */,
 				FD93FB3A27CD9F96008BEA53 /* StructData.swift */,
 				5BB763DB27D003D000ED450E /* GetServices.swift */,
 				FD93FB1D27CD9C50008BEA53 /* ContentView.swift */,
 				5B94751E27CEAB5400CC98FA /* Detail.swift */,
 				5BE2583727D27CD4001E2289 /* FavoriteGames.swift */,
+				5B829B5C27E21A170085D1B8 /* CoreDataGames.swift */,
 				FD93FB1F27CD9C51008BEA53 /* Assets.xcassets */,
 				FD93FB2127CD9C51008BEA53 /* Preview Content */,
-				5B829B5C27E21A170085D1B8 /* CoreDataGames.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
