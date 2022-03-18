@@ -27,20 +27,25 @@ struct Detail: View {
     var body: some View {
         
      
-        NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+    
             NavigationView {
                
                     VStack {
-                        HStack {
-                            Spacer()
-                            Image(systemName: "heart.fill")
-                        }
+                     
                         AsyncImage(url: URL(string: thumbnail))
                             .scaledToFill()
                             .clipShape(RoundedRectangle(cornerRadius:5))
                             .shadow(radius: 30)
 
-                        
+                        HStack {
+                            NavigationLink(destination: FavoriteView()) {
+                            Spacer()
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.red)
+                            Text("Favorite")
+                           
+                        }
+                        }
                        // }.navigationTitle("Details Game")
                         List{
                             Text("\(title)")
@@ -56,7 +61,7 @@ struct Detail: View {
                         }
                 }
                 }
-        }
+        
 
      .navigationTitle("\(title)")
      .navigationBarTitleDisplayMode(.inline)
