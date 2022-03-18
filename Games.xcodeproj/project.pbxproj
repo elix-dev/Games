@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B829B5D27E21A170085D1B8 /* CoreDataGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B829B5C27E21A170085D1B8 /* CoreDataGames.swift */; };
+		5B816DC527E4DBA400F4FE6D /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B816DC427E4DBA400F4FE6D /* FavoriteView.swift */; };
 		5B94751B27CE71C700CC98FA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5B94751A27CE71C700CC98FA /* Kingfisher */; };
 		5B94751F27CEAB5400CC98FA /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94751E27CEAB5400CC98FA /* Detail.swift */; };
 		5BB763DC27D003D000ED450E /* GetServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB763DB27D003D000ED450E /* GetServices.swift */; };
-		5BE2583827D27CD5001E2289 /* FavoriteGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2583727D27CD4001E2289 /* FavoriteGames.swift */; };
 		FD93FB1C27CD9C50008BEA53 /* GamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93FB1B27CD9C50008BEA53 /* GamesApp.swift */; };
 		FD93FB1E27CD9C50008BEA53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93FB1D27CD9C50008BEA53 /* ContentView.swift */; };
 		FD93FB2027CD9C51008BEA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD93FB1F27CD9C51008BEA53 /* Assets.xcassets */; };
@@ -24,10 +23,9 @@
 
 /* Begin PBXFileReference section */
 		5B66C10C27E363B900480CFF /* variables y constantes .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "variables y constantes .playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		5B829B5C27E21A170085D1B8 /* CoreDataGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataGames.swift; sourceTree = "<group>"; };
+		5B816DC427E4DBA400F4FE6D /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		5B94751E27CEAB5400CC98FA /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		5BB763DB27D003D000ED450E /* GetServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServices.swift; sourceTree = "<group>"; };
-		5BE2583727D27CD4001E2289 /* FavoriteGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGames.swift; sourceTree = "<group>"; };
 		FD93FB1827CD9C50008BEA53 /* Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Games.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD93FB1B27CD9C50008BEA53 /* GamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesApp.swift; sourceTree = "<group>"; };
 		FD93FB1D27CD9C50008BEA53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,10 +82,9 @@
 				5BB763DB27D003D000ED450E /* GetServices.swift */,
 				FD93FB1D27CD9C50008BEA53 /* ContentView.swift */,
 				5B94751E27CEAB5400CC98FA /* Detail.swift */,
-				5BE2583727D27CD4001E2289 /* FavoriteGames.swift */,
-				5B829B5C27E21A170085D1B8 /* CoreDataGames.swift */,
 				FD93FB1F27CD9C51008BEA53 /* Assets.xcassets */,
 				FD93FB2127CD9C51008BEA53 /* Preview Content */,
+				5B816DC427E4DBA400F4FE6D /* FavoriteView.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -182,13 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B829B5D27E21A170085D1B8 /* CoreDataGames.swift in Sources */,
 				5BB763DC27D003D000ED450E /* GetServices.swift in Sources */,
 				FD93FB1E27CD9C50008BEA53 /* ContentView.swift in Sources */,
 				5B94751F27CEAB5400CC98FA /* Detail.swift in Sources */,
 				FD93FB3B27CD9F96008BEA53 /* StructData.swift in Sources */,
+				5B816DC527E4DBA400F4FE6D /* FavoriteView.swift in Sources */,
 				FD93FB1C27CD9C50008BEA53 /* GamesApp.swift in Sources */,
-				5BE2583827D27CD5001E2289 /* FavoriteGames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
+import Alamofire
+import SwiftyJSON
 
 struct Detail: View {
     
@@ -19,31 +22,43 @@ struct Detail: View {
     let freetogame_profile_url: String
     let title: String
     let thumbnail: String
- 
+    //var heart: bool
     
     var body: some View {
-     NavigationView {
-            VStack {
-                AsyncImage( url: URL(string: thumbnail ))
-                    .scaledToFill()
-                    .clipShape(RoundedRectangle(cornerRadius:5))
-                    .shadow(radius: 30)
-                    
-               // }.navigationTitle("Details Game")
-                List{
-                    Text("\(title)")
-                    .font(.title)
-                    Text("\(short_description)")
-                    Text("\(developer)")
-                    Text("\(release_date)")
-                    Text("\(publisher)")
-                    Text("\(game_url)")
-                    Text("\( genre)")
-                    Text("\(freetogame_profile_url)"
-                    )
+        
+     
+        NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+            NavigationView {
+               
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Image(systemName: "heart.fill")
+                        }
+                        AsyncImage(url: URL(string: thumbnail))
+                            .scaledToFill()
+                            .clipShape(RoundedRectangle(cornerRadius:5))
+                            .shadow(radius: 30)
+
+                        
+                       // }.navigationTitle("Details Game")
+                        List{
+                            Text("\(title)")
+                            .font(.title)
+                            Text("\(short_description)")
+                            Text("\(developer)")
+                            Text("\(release_date)")
+                            Text("\(publisher)")
+                            Text("\(game_url)")
+                            Text("\( genre)")
+                            Text("\(freetogame_profile_url)"
+                            )
+                        }
+                }
                 }
         }
-     }.navigationTitle("\(title)")
+
+     .navigationTitle("\(title)")
      .navigationBarTitleDisplayMode(.inline)
      .ignoresSafeArea(edges: .all)
     }
@@ -61,4 +76,5 @@ struct Detail_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
+
 }
