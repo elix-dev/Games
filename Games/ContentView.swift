@@ -48,7 +48,7 @@ struct ContentView : View {
     }
     
     var body: some View {
-        //indicator
+        
         NavigationView {
             ZStack {
                 VStack {
